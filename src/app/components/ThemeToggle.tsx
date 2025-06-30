@@ -1,11 +1,11 @@
 "use client";
-import { useTheme } from "../app/theme-context";
-import { FaSun, FaMoon } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { useTheme } from "../context/theme-context";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
-  
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -28,7 +28,7 @@ export default function ThemeToggle() {
 
 function ThemeToggleContent() {
   const { theme, toggleTheme } = useTheme();
-  
+
   const handleToggle = () => {
     toggleTheme();
   };
@@ -37,7 +37,9 @@ function ThemeToggleContent() {
     <div className="flex items-center gap-2">
       <button
         onClick={handleToggle}
-        aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+        aria-label={
+          theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+        }
         className="p-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-black hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         {theme === "dark" ? (

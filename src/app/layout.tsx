@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DEVELOP.ME",
-  description: "Raintor Task - A showcase of modern web development skills",
+  title: "Raintor",
+  description: "The only all in one Solutions For Your success",
 };
   
 export default function RootLayout({

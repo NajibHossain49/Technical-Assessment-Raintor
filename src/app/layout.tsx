@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "DEVELOP.ME",
   description: "Raintor Task - A showcase of modern web development skills",
 };
-
+  
 export default function RootLayout({
   children,
 }: Readonly<{
